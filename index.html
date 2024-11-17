@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Bloxd Server List</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 20px 0;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .server-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .server-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .server-card h2 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: #333;
+        }
+
+        .server-card p {
+            color: #777;
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .play-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .play-button:hover {
+            background-color: #0056b3;
+        }
+
+        .server-category {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #5f6368;
+        }
+
+        .server-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.server-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge.popular {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bloxd Server List</h1>
+            <p>Explore and join a variety of community-driven servers for endless fun!</p>
+            <p>Make your server appear here! - <a href="https://forms.gle/Um8CZTvcTyFB75fR7">https://forms.gle/Um8CZTvcTyFB75fR7</a></p>
+        </div>
+        
+        <div class="category-selector">
+            <select id="category-select">
+                <option value="all">All Categories</option>
+                <option value="pvp">PVP ⚔️</option>
+                <option value="roleplay">Roleplay 👪</option>
+                <option value="parkour">Parkour ⏫</option>
+                <option value="survivalhardcore">Survival/Hardcore 🌍</option>
+            </select>
+        </div>
+
+        <div id="servers-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
